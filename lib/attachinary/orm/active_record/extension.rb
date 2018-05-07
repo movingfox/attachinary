@@ -21,7 +21,8 @@ module Attachinary
           -> { where scope: options[:scope].to_s }, 
           as: :attachinariable,
           class_name: '::Attachinary::File',
-          dependent: :destroy
+          dependent: :destroy,
+          order: 'position ASC'
       end
 
 
